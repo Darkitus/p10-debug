@@ -13,4 +13,4 @@ export const MONTHS = {
   12: "décembre",
 };
 
-export const getMonth = (date) => MONTHS[date.getMonth() + 1]; // Ajout de 1 car les mois sont indexés à partir de 0 (particularité de Javascript) donc ça les indexe à partir de 1
+export const getMonth = (date) => MONTHS[date.getMonth() + 1]; // Date.getMonth() renvois une valeur entre 0 et 11 donc il faut incrémenter de 1 pour obtenir le mois actuel
