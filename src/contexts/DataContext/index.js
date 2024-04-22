@@ -20,6 +20,7 @@ export const api = {
 export const DataProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
+  const last = data && data.events && data.events[data.events.length - 1];
 
   const getData = useCallback(async () => {
     try {
@@ -37,6 +38,7 @@ export const DataProvider = ({ children }) => {
     () => ({
       data,
       error,
+      last,
     }),
     [data, error]
   );
